@@ -1,15 +1,32 @@
 <div class="profile">
     <section id="wrapper">
         <header id="header">
-        {% if site.aboutPage %}
-            <a href="{{ "/" | relative_url  }}about">
-                <img id="avatar" class="2x" src="{{ "/" | relative_url  }}assets/images/avatar.png"/>
-            </a>
-        {% else %}
+      		<style>
+      			.title {
+      				margin: 24px 0;
+      			}
+      			ol {
+      				list-style-type: none;
+      				padding: 0;margin: 0;
+      			}
+      			ol li {
+      				display: inline-block;
+      				margin: 4px;
+      			}
+      			.social-button.borderless {
+      				padding: 20px 0;
+      			}
+      		</style>
             <img id="avatar" class="2x" src="{{ "/" | relative_url  }}assets/images/avatar.png"/>
-        {% endif %}
             <h1>{{ site.author }}</h1>
             <h2>{{ site.description }}</h2>
+            <ol>
+                <li><a class="icon-github social-button borderless" href="https://github.com/zac"></a></li>
+                <li><a class="icon-twitter social-button borderless" href="https://twitter.com/zacwhite"></a></li>
+                <li><a class="icon-instagram social-button borderless" href="https://www.instagram.com/zacwhite/"></a></li>
+                <li><a class="icon-linkedin social-button borderless" href="https://www.linkedin.com/in/zacwhite/"></a></li>
+                <li><a class="icon-facebook social-button borderless" href="https://www.facebook.com/zacwhite"></a></li>
+            </ol>
         </header>
     </section>
 </div>

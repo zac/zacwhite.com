@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>Callhuna</title>
+    <link>http://zacwhite.com/</link>
+    <description>This feed is an appcast feed for the Callhuna beta.</description>
+    <generator>Feeder 1.4.5 http://reinventedsoftware.com/feeder/</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <language>en</language>
+    <pubDate>Mon, 30 Jul 2007 15:49:32 -0500</pubDate>
+    <lastBuildDate>Mon, 30 Jul 2007 15:49:32 -0500</lastBuildDate>
+    <item>
+      <title>Callhuna .11b (27)</title>
+      <description><![CDATA[<ul>
+<li>Fixed bugs!</li>
+<li>Now auto-detects if you have the Callwave widget installed and uses settings from that.</li>
+<li>Much less picky about input on the registration screen.</li>
+<p></ul></p>]]></description>
+      <pubDate>Mon, 30 Jul 2007 15:49:24 -0500</pubDate>
+      <enclosure url="http://zacwhite.com/software/downloads/Callhuna_25.zip" length="1822917" type="application/zip" sparkle:version="27"/>
+      <guid isPermaLink="false">callhuna-11b-27</guid>
+    </item>
+    <item>
+      <title>Callhuna .11b (25)</title>
+      <description><![CDATA[Initial beta of Callhuna.]]></description>
+      <pubDate>Mon, 30 Jul 2007 15:49:19 -0500</pubDate>
+      <enclosure url="http://zacwhite.com/software/downloads/Callhuna_25.zip" length="1822917" type="application/zip" sparkle:version="25"/>
+      <guid isPermaLink="false">searchmagic-10r16</guid>
+    </item>
+  </channel>
+</rss>

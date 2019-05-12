@@ -10,13 +10,13 @@ highlighter: rouge
 plugins: [jekyll-paginate]
 paginate: 5
 paginate_path: '/posts/page:num/'
-domain_name: 'https://zacwhite.com'
+domain_name: 'https://zac.github.io'
 google_analytics: 'UA-XXXXXXXX-X'
 disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
-url:            'https://zacwhite.com'
+url:            'https://zac.github.io'
 author:         'Zac White'
 authorTwitter:  'zacwhite'
 

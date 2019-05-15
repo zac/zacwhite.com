@@ -146,3 +146,7 @@ extension Template: ExpressibleByStringInterpolation {
 `ExpressibleByStringInterpolation` is a powerful way to build some interesting functionality out of syntax that appears like it's part of the language itself. Apple is going to be allowing more hooks like this in the future. Along similar lines, [Property Delegates](https://github.com/apple/swift-evolution/blob/master/proposals/0258-property-delegates.md) is another possible upcoming feature of Swift which could allow developers to define how properties store their values.
 
 Type-safety can be tricky and require jumping through some hoops. Fortunately, they are hoops you jump through once when creating interfaces for your future self or other developers to use. Then, no more hoops. Just auto-completable, typo-proof code.
+
+If you'd like to mess around with the Playground, [here's the zip][1]
+
+[1]:{{ site.url }}/files/Template.playground.zip

@@ -45,7 +45,7 @@ So now we have something that shows exactly what value should go where in the st
 There are a couple down-sides though:
 
 1. It requires a definition of a type to 'contain' the inserted values so the key paths have something to reference.
-2. Because the interpolation syntax in Swift uses `\()` and the key paths use `\.`... there's a lot of visual junk in the string.
+2. Because the interpolation syntax in Swift uses `\()` and the key paths use `\.` there are a lot of backslashes. Couple that with our current use-case of a path which has several forward slashes and visually parsing the string can be difficult.
 
 (1) doesn't bother me too much, but (2) makes the string a little tough to read. I'm not sure what would be better, but another approach is to use overloading to use "+" as a concatenation operator. So you'd end up with something like this: `"/users/" + \.username + "/" + \.id`. Is this better? 🤷‍♂️
 

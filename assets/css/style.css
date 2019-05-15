@@ -151,7 +151,8 @@ a,
 }
 
 ul 	{ margin:0; padding:0; }
-li	{ list-style-type:circle; list-style-position:inside; }
+ol 	{ margin:0; padding:0 0 20px 0; }
+ul.li	{ list-style-type:circle; list-style-position:inside; }
 
 /* Line Height */
 #post-body, p { line-height:1.7; }

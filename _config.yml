@@ -1,22 +1,37 @@
 name: Zac White
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+description: Code, Snippets, Tips & Tricks
+meta_description: "Co-Founder, Velos Mobile. Developer, San Francisco."
 
 aboutPage: true
 
 markdown: kramdown
 highlighter: rouge
 
-plugins: [jekyll-paginate]
+plugins: 
+  - jekyll-paginate
+  - jekyll-seo-tag
 paginate: 5
 paginate_path: '/posts/page:num/'
-domain_name: 'https://zac.github.io'
-google_analytics: 'UA-XXXXXXXX-X'
+domain_name: 'https://zacwhite.com'
+google_analytics: 'UA-73050-1'
 disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
+twitter:
+  username: zacwhite
+  card: summary
+
+social:
+  name: Zac White
+  links:
+    - https://twitter.com/zacwhite
+    - https://www.facebook.com/zacwhite
+    - https://www.instagram.com/zacwhite
+    - https://www.linkedin.com/in/zacwhite
+    - https://github.com/zac
+
 # Details for the RSS feed generator
-url:            'https://zac.github.io'
+url:            'https://zacwhite.com'
 author:         'Zac White'
 authorTwitter:  'zacwhite'
 

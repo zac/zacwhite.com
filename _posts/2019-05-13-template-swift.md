@@ -3,12 +3,12 @@ title: Templates in Swift with ExpressibleByStringInterpolation
 date: 2019-05-13T14:00:00-07:00
 author: Zac White
 layout: post
-description: How to build better type-safe strings
+description: Using ExpressibleByStringInterpolation to build better type-safe templates
 ---
 
 In Swift, we're always striving for type-safety. The less we can 'stringly' type the better. When it comes to situations where we need to define a string that inserts various elements, the canonical example being a URL path, there have been plenty of approaches in the past. In Objective-C, you might see something like this:
 
-{% highlight Swift %}
+```objective_c
 Template *template = [[Template alloc] initWithTemplateString:@"/users/:username:/:id:"];
 
 NSString *fullString = [template fill:@[
@@ -17,8 +17,7 @@ NSString *fullString = [template fill:@[
 ]];
 
 // now fullString should be: "/users/zac/42"
-
-{% endhighlight %}
+```
 
 What's wrong with that? Well, first of all the identifiers in the template string have to match the strings in the dictionary. If one is wrong, then the other won't be inserted and you'll get a runtime issue. In fact, I snuck in "usernane" above instead of "username" and I bet you didn't notice!
 
@@ -28,8 +27,7 @@ The other issue that can come up is what kinds of values are supported? If you a
 
 What if we utilize [`ExpressibleByStringInterpolation`](https://developer.apple.com/documentation/swift/expressiblebystringinterpolation) and [key paths](https://developer.apple.com/documentation/swift/keypath) to create something that doesn't have the above issues?
 
-{% highlight Swift %}
-
+```swift
 struct Values {
   let username: String
   let id: Int
@@ -37,8 +35,7 @@ struct Values {
 
 let template: Template<Values> = "/users/\(keyPath: \.username)/\(keyPath: \.id)"
 let fullString = template.fill(with: Values(username: "zac", id: 42))
-
-{% endhighlight %}
+```
 
 So now we have something that shows exactly what value should go where in the string. And more importantly, those values are strongly typed to be something that can definitely be inserted into the template. If I mistype "usernane" again, I'll get a compiler error.
 
@@ -53,7 +50,7 @@ There are a couple down-sides though:
 
 We first need to control the type being passed to us to fill values in the template, but in a way that allows developers to extend support for custom types in the future. We can accomplish this with a protocol:
 
-{% highlight Swift %}
+```swift
 public protocol TemplateInsertable {
     var stringValue: String { get }
 }
@@ -65,13 +62,13 @@ extension String: TemplateInsertable {
 extension Int: TemplateInsertable {
     public var stringValue: String { return "\(self)" }
 }
-{% endhighlight %}
+```
 
 Next we'll need the `Template` type which can handle 'appending' `TemplateInsertable`s or can append key paths to `TemplateInsertable`s. We have to store these components in a way that allows us to go through and construct the final template string with different passed in values. Below is one way to accomplish that where we keep a string internally of all the strings that have been appended to the template. And when a key path is appended, the future index in that string where the value will be inserted is stored along with the key path itself.
 
 This lets us enumerate through those key paths and insert the string values into the positions which were defined in the interpolation.
 
-{% highlight Swift %}
+```swift
 public struct Template<T> {
 
     private var template: String = ""
@@ -98,11 +95,11 @@ public struct Template<T> {
         return fullString
     }
 }
-{% endhighlight %}
+```
 
 Now comes the `ExpressibleByStringInterpolation` piece. The protocol requires declaring a type conforming to `StringInterpolationProtocol` which will be called by the standard library based on the components in the order required to 'build up' the full instance of your type. An example from [the docs](https://developer.apple.com/documentation/swift/stringinterpolationprotocol) explains that if you have `("The time is \(time)." as MyString)` in your source, the compiled code will be similar to:
 
-{% highlight Swift %}
+```swift
 var interpolation = MyString.StringInterpolation(literalCapacity: 13, 
                                                  interpolationCount: 1)
 
@@ -111,11 +108,11 @@ interpolation.appendInterpolation(time)
 interpolation.appendLiteral(".")
 
 MyString(stringInterpolation: interpolation)
-{% endhighlight %}
+```
 
 If we implement `StringInterpolationProtocol`, we can call our internal `append()` functions. Note the type of the appendInterpolation function. We get to define the number of parameters, the parameter name and importantly for us, the type constraints on the parameters. Now we can be sure that all elements in our string interpolation will definitely be from our generic type `T` and be pointing to a value of type `U` which conforms to `TemplateInsertable`.
 
-{% highlight Swift %}
+```swift
 extension Template: ExpressibleByStringInterpolation {
 
     public init(stringInterpolation: StringInterpolation) {
@@ -139,7 +136,7 @@ extension Template: ExpressibleByStringInterpolation {
         }
     }
 }
-{% endhighlight %}
+```
 
 ### Conclusion
 

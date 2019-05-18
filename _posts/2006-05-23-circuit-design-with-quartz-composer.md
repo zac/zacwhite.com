@@ -4,9 +4,8 @@ title: Circuit Design With Quartz Composer
 date: 2006-05-23T14:46:59-07:00
 author: Zac White
 layout: post
-guid: http://zacwhite.com/blog/2006/05/23/circuit-design-with-quartz-composer/
-permalink: /2006/05/23/circuit-design-with-quartz-composer/
-redirect_from: /blog/2006/05/23/circuit-design-with-quartz-composer/
+guid: https://zacwhite.com/blog/2006/05/23/circuit-design-with-quartz-composer/
+permalink: /blog/2006/05/23/circuit-design-with-quartz-composer/
 categories:
   - random
   - software

@@ -1,4 +1,5 @@
 name: Zac White
+title: Zac White
 description: Code, Snippets, Tips & Tricks
 meta_description: "Co-Founder, Velos Mobile. Developer, San Francisco."
 
@@ -6,6 +7,10 @@ aboutPage: true
 
 markdown: kramdown
 highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 plugins: 
   - jekyll-paginate

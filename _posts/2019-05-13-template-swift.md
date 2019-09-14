@@ -11,10 +11,10 @@ In Swift, we're always striving for type-safety. The less we can 'stringly' type
 ```objective_c
 Template *template = [[Template alloc] initWithTemplateString:@"/users/:username:/:id:"];
 
-NSString *fullString = [template fill:@[
-    @"usernane": "zac",
-    @"id": 42
-]];
+NSString *fullString = [template fill:@{
+    @"usernane" : @"zac",
+    @"id" : @(42)
+}];
 
 // now fullString should be: "/users/zac/42"
 ```

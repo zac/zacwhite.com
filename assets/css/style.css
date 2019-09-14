@@ -266,28 +266,9 @@ span.code {
 	font-size:14px;
 }
 
-/* .rouge-code pre {
-	overflow-x: auto;
-} */
-
-/* .rouge-code pre {
-    display: block;
-    background-color: #1a1a1a;
-    padding: 15px 20px;
-    border-radius: 12px;
-    color: #a9bcbc;
-    line-height: 1.4em;
-    font-size: 0.95em;
-    overflow-x: auto;
-    white-space: pre;
-    -webkit-overflow-scrolling: touch;
-} */
-
 pre	{
 	display: block;
-	font-family: "SFMono-Regular", Monaco, monospace;/*, Menlo, Monaco, Courier*/;
-	white-space:pre-wrap;
-	/*border: 1px solid #ddd;*/
+	font-family: "SFMono-Regular", Monaco, monospace;
 	padding:20px;
 	background-color:#fdfdfd;
 	overflow:auto;

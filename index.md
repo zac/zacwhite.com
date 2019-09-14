@@ -2,7 +2,7 @@
 profile: true
 ---
 
-Hello! I'm a mobile developer living in sunny (three weeks out of the year) San Francisco. Around 7 years ago I co-founded a small consulting company, [Velos Mobile](https://velosmobile.com). I'm their Chief  Platforms Developer. 
+Hello! I'm a mobile developer living in beautiful San Francisco. Around 8 years ago I co-founded a small consulting company, [Velos Mobile](https://velosmobile.com). I'm their Chief  Platforms Developer.
 
 <ul id="post-list">
     <h3>Latest Post</h3>

@@ -27,7 +27,6 @@ body {
 
 h1 {
 	font-size: 30px;
-	letter-spacing: -1px;
 	color: #222;
 	font-weight: bold;
 }
@@ -180,7 +179,6 @@ em, i { font-style: italic; }
 
 .home h1 {
 	font-size: 30px;
-	letter-spacing: -1px;
 	color: #222;
 	font-weight: bold;
 }
@@ -260,24 +258,26 @@ hr {
 	background: #eee;
 }
 
-span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
+span.code { 
+	font-family: "SFMono-Regular", Monaco, monospace;
+	background-color:#EEE;
+	font-size:14px;
+}
 
 pre	{
-	font-family:Menlo, Monaco, Courier;
-	white-space:pre-wrap;
-	/*border: 1px solid #ddd;*/
+	display: block;
+	font-family: "SFMono-Regular", Monaco, monospace;
 	padding:20px;
 	background-color:#fdfdfd;
-	/*font-size:14px;*/
 	overflow:auto;
 	border-radius: 3px;
 	background: #272b2d;
-	  font-family: 'Source Code Pro',Menlo,monospace;
-	  font-size: 13px;
-	  line-height: 1.5em;
-	  font-weight: 500;
+	line-height: 1.5em;
+	font-weight: 500;
 	color: #d0d4d7;
-
+    overflow-x: auto;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
 }
 
 table {

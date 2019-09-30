@@ -75,6 +75,10 @@ h2 {
 
 }
 
+video {
+	width:100%;
+}
+
 nav.main-nav {
 	padding: 20px 20px 0;
 
@@ -264,6 +268,17 @@ span.code {
 	font-size:14px;
 }
 
+code.highlighter-rouge {
+	font-family: "SFMono-Regular", Monaco, monospace;
+	font-size: 14px;
+	padding: 4px;
+	border-radius: 4px;
+	background: #eee;
+	line-height: 1.0em;
+	font-weight: 500;
+	color: #555;
+}
+
 pre	{
 	display: block;
 	font-family: "SFMono-Regular", Monaco, monospace;
@@ -433,7 +448,6 @@ Post List
 
 #post-meta div span.dark {
 	color: #1E2025;
-
 }
 
 #post-meta div {

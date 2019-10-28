@@ -6,3 +6,4 @@ gem "jekyll-sitemap"
 gem "jekyll-paginate"
 gem "jekyll-redirect-from"
 gem 'jekyll-seo-tag'
+gem 'jekyll-feed'

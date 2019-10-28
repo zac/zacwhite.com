@@ -15,6 +15,7 @@ kramdown:
 plugins: 
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-feed
 paginate: 5
 paginate_path: '/posts/page:num/'
 domain_name: 'https://zacwhite.com'

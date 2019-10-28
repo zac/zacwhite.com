@@ -43,12 +43,12 @@ But we want to add a `Binder<CGPoint>` to the mix and an initializer that initia
 @State private var initialOffset: CGPoint?
 
 /// The offset of the scroll view updated as the scroll view scrolls
-public var offset: Binding<CGPoint>
+@Binding public var offset: CGPoint
 
-public init(_ axes: Axis.Set = .vertical, showsIndicators: Bool = true, offset: Binding<CGPoint> = .constant(.zero), @ViewBuildercontent: () -> Content) {
+public init(_ axes: Axis.Set = .vertical, showsIndicators: Bool = true, offset: Binding<CGPoint> = .constant(.zero), @ViewBuilder content: () -> Content) {
     self.axes = axes
     self.showsIndicators = showsIndicators
-    self.offset = offset
+    self._offset = offset
     self.content = content()
 }
 ```
@@ -82,7 +82,7 @@ struct Run: View {
     let block: () -> Void
 
     var body: some View {
-        block()
+        DispatchQueue.main.async(execute: block)
         return AnyView(EmptyView())
     }
 }
@@ -101,5 +101,8 @@ This kind of behavior wasn't possible on previous versions of watchOS, so this s
 <hr />
 
 If you'd like to mess around with the watchOS project demonstrating this, [here's the zip][1]
+
+### *Update 10/28/19*
+Thanks to [@dmcgloin](https://twitter.com/dmcgloin) on Twitter for pointing out that Xcode 11.2 beta 2 was throwing a helpful warning that the original code was "Modifying state during view update, this will cause undefined behavior." One workaround was to kick the closure inside the `Run` view to run asynchronously. The above inline code and the sample zip have been updated with this workaround.
 
 [1]:{{ site.url }}/files/Headlines.zip

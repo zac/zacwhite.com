@@ -1,10 +1,11 @@
 @font-face {
 	font-family: 'socialfont';
 	src:url('../fonts/socialfont.eot?mh1paq');
-	src:url('../fonts/socialfont.eot?#iefixmh1paq') format('embedded-opentype'),
+	src:url('../fonts/socialfont.svg?mh1paq#icomoon') format('svg'),
+    url('../fonts/socialfont.eot?#iefixmh1paq') format('embedded-opentype'),
 		url('../fonts/socialfont.woff?mh1paq') format('woff'),
-		url('../fonts/socialfont.ttf?mh1paq') format('truetype'),
-		url('../fonts/socialfont.svg?mh1paq#icomoon') format('svg');
+		url('../fonts/socialfont.ttf?mh1paq') format('truetype');
+
 	font-weight: normal;
 	font-style: normal;
 }
@@ -76,6 +77,22 @@
 
 .icon-dribbble:before {
     content: "\e60d";
+}
+
+.icon-threads:before {
+    content: "\e60e";
+}
+
+.icon-mastodon:before {
+    content: "\e60f";
+}
+
+.icon-mastodon {
+    transform: scaleY(-1) translateY(-33px);
+}
+
+.icon-threads {
+    transform: scaleY(-1) translateY(-33px);
 }
 
 /* socialbuttons */
@@ -159,6 +176,14 @@ a.social-button.color.icon-github:hover {
 
 a.social-button.color.icon-dribbble:hover {
     background-color: #ea4c89;
+}
+
+a.social-button.color.icon-threads:hover {
+    background-color: #000000;
+}
+
+a.social-button.color.icon-mastodon:hover {
+    background-color: #5A4ADF;
 }
 
 a.social-button.color:before {
@@ -277,4 +302,10 @@ a.social-button.borderless.icon-github:hover {
 }
 a.social-button.borderless.icon-dribbble:hover {
     color:#ea4c89;
+}
+a.social-button.borderless.icon-threads:hover {
+    color:#000000;
+}
+a.social-button.borderless.icon-mastodon:hover {
+    color:#5A4ADF;
 }

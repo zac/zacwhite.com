@@ -40,4 +40,6 @@ struct MyView: View {
 }
 ```
 
-Bonus tip: In figuring out what environment is available in a preview, I stumbled upon this [super useful trick](https://developer.apple.com/news/?id=8vkqn3ih) (directly from Apple!) that I somehow missed when it was shared. It's not often you should need to debug something happening in a preview, but now you can!
+~~Bonus tip: In figuring out what environment is available in a preview, I stumbled upon this [super useful trick](https://web.archive.org/web/20210923151359/https://developer.apple.com/news/?id=8vkqn3ih) that I somehow missed when it was shared. It's not often you should need to debug something happening in a preview, but now you can!~~
+
+**Edit 8/16/23:** Unfortunately the above referenced ability to debug SwiftUI previews was [taken out in Xcode 13](https://developer.apple.com/forums/thread/683773?answerId=680833022#680833022). Oh well! You can at least see logs for previews, so attaching the debugger isn't as necessary as it used to be.

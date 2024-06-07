@@ -3,6 +3,10 @@ _site/
 .sass-cache/
 .jekyll-metadata
 
+### IDEs ###
+.nova
+.vscode
+
 ### macOS ###
 *.DS_Store
 .AppleDouble
